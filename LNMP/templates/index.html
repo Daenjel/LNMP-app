@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block body %}
+<div id="container">
+    <form method="POST">
+            <div>
+                <input name="amount" type="number" class="form-control" placeholder="Enter Amount" id="amount"><br>
+            
+                <input name="phoneNumber" type="number"placeholder="Enter Mpesa Number" class="form-control" id="phoneNumber">
+            </div>
+            <button id="send" type="submit" class="btn">Send Money</button>
+    </form>
+</div>
+{% endblock %}
