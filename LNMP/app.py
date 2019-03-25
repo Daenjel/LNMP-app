@@ -25,8 +25,8 @@ def mpesa():
     #amount = '1'
     #PartyA = '254718453698'
     
-    consumer_key = "FPjPl8OknAclG3TYOvAIanJroWGuMNfg"
-    consumer_secret = "Smqt7ZQ61Xlgav8P"
+    consumer_key = "CONSUMER KEY"
+    consumer_secret = "CONSUMER SECRET"
     api_URL = "https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials"
 
     r = requests.get(api_URL, auth=HTTPBasicAuth(consumer_key, consumer_secret),verify=False)
@@ -38,22 +38,22 @@ def mpesa():
 
     # define the variales
     # provide the following details, this part is found on your test credentials on the developer account
-    BusinessShortCode = '174379'
-    Passkey = 'bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919' 
+    BusinessShortCode = 'BUSINESSCODE'
+    Passkey = 'PASSKEY' 
 
-    AccountReference = '33745544'
-    TransactionDesc = 'daenjel'
+    AccountReference = 'ACCT'
+    TransactionDesc = 'DESC'
     #Timestamp = date('YmdGis')
     #Password = base64_encode(BusinessShortCode.Passkey.Timestamp)
 
     # callback url
-    CallBackURL = 'http://26ebc457.ngrok.io/hooks/mpesa'
+    CallBackURL = 'CALLBACK URL'
 
     api_url = "https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest"
     headers = { "Authorization": "Bearer %s" %access_token }
     request = {
       "BusinessShortCode": BusinessShortCode,
-      "Password": "MTc0Mzc5YmZiMjc5ZjlhYTliZGJjZjE1OGU5N2RkNzFhNDY3Y2QyZTBjODkzMDU5YjEwZjc4ZTZiNzJhZGExZWQyYzkxOTIwMTkwMzIzMTUzNDM4",
+      "Password": "PASSKEY",
       "Timestamp": "20190323153438",
       "TransactionType": "CustomerPayBillOnline",
       "Amount": amount,
